@@ -1,0 +1,161 @@
+@font-face {
+    font-family: 'NeonLights' ;
+    src: url('fonts/Neon-e2wg.ttf') format('truetype');
+ }
+
+ body {
+    background-image: url('images/background.png');
+}
+
+h1 {
+    font-family: 'VT323', monospace;
+    font-size: 65px;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'NeonLights';
+    font-size: 50px;
+    margin: 25px;
+}
+
+p {
+    font-family: 'VT323', monospace;
+}
+
+button {
+    font-family: 'VT323', monospace;
+    border-radius: 25px;
+    border: 1px outset grey;
+    width: 60px;
+    height: 30px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: lightgray;
+    transition: 0.3s;
+}
+
+button:active {
+    background-color: darkgray;
+    transition: 0s;
+    border-style: inset;
+}
+
+input {
+    text-align: center;
+}
+
+.container {
+    text-align: center;
+ }
+
+#squares-box {
+    width: 1160px;
+    height: 680px;
+    margin: 0 auto;
+    background-color: indianred;
+    border-radius: 12px;
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: 
+    "title"
+    "screen"
+    "knobs";
+    margin-top: 40px;
+}
+
+#etch-title {
+    grid-area: title;
+}
+
+#knobs {
+    grid-area: knobs;
+    display: flex;
+    width: 1100px;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-content: center;
+}
+
+.knob {
+    background-color: #fbf5ee;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    justify-self: flex-end;
+}
+
+#left-knob {
+    justify-self: flex-start;
+}
+
+#right-knob {
+    justify-self: flex-end;
+}
+
+#squares {
+    grid-area: screen;
+    text-align: center;
+    width: 960px;
+    height: 480px;
+    margin: 0 auto;
+}
+.col, .box {
+    display: inline-grid;
+    align-self: center;
+}
+
+.box {
+    background-color: rgb(173, 173, 173);
+    box-sizing: border-box;
+}
+
+#grid-opts {
+    justify-self: center;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    margin: 0 auto;
+    grid-template-rows: auto auto;
+    grid-template-columns: repeat(6, 80px);
+    grid-template-areas: 
+    "res-label  res-label   res-label   .     col-label   col-label"
+    "low-button mid-button  hi-button   clear grey-button colour-button ";
+    margin-bottom: 20px;
+}
+
+#res-label {
+    grid-area: res-label;
+}
+
+#col-label {
+    grid-area: col-label;
+}
+
+#low-button {
+    grid-area: low-button;
+}
+
+#mid-button {
+    grid-area: mid-button;
+}
+
+#hi-button {
+    grid-area: hi-button;
+}
+
+#clear {
+    grid-area: clear;
+}
+
+#grey-button {
+    grid-area: grey-button;
+}
+
+#colour-button {
+    grid-area: colour-button;
+}
+    
